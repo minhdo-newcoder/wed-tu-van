@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dịch vụ - DO MT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">DO MT</div>
+            <ul class="menu">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html" class="active">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="news.html">Tin tức</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Các Dịch vụ Của Chúng tôi</h1>
+        </div>
+    </section>
+
+    <!-- Services Carousel -->
+    <section class="services-carousel-section">
+        <div class="container">
+            <h2>Khám phá Dịch vụ của chúng tôi</h2>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn prev" onclick="prevService()">❮</button>
+                <div class="carousel-container">
+                    <div id="services-carousel" class="services-carousel"></div>
+                </div>
+                <button class="carousel-btn next" onclick="nextService()">❯</button>
+            </div>
+            <div class="carousel-indicators" id="carousel-indicators"></div>
+        </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="services-detail">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Danh sách Dịch vụ Chi tiết</h2>
+            <div id="services-container"></div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Cần Tư vấn cho Dịch vụ nào?</h2>
+            <button class="btn btn-primary">Liên hệ ngay</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DO MT</h4>
+                    <p>Dịch vụ Tư vấn Môi trường Chuyên nghiệp</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <p>📞 0123-456-789</p>
+                    <p>📧 info@domt.vn</p>
+                    <p>📍 Hà Nội, Việt Nam</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DO MT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,840 @@
+/* ==================== General Styles ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1abc9c;
+    --secondary-color: #2980b9;
+    --accent-color: #27ae60;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --white-color: #ffffff;
+    --text-color: #333333;
+    --border-color: #ddd;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==================== Navigation ==================== */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+
+.menu a:hover,
+.menu a.active {
+    opacity: 0.8;
+}
+
+.menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: white;
+}
+
+/* ==================== Hero Section ==================== */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+/* ==================== Buttons ==================== */
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #1e5fa7;
+}
+
+/* ==================== Services Preview ==================== */
+.services-preview {
+    padding: 80px 0;
+    background-color: var(--light-color);
+}
+
+.services-preview h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--dark-color);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card .icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* ==================== Why Us Section ==================== */
+.why-us {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.why-us h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: var(--dark-color);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    padding: 20px;
+    background: var(--light-color);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.feature h4 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.feature p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* ==================== CTA Section ==================== */
+.cta {
+    background: linear-gradient(135deg, var(--dark-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+/* ==================== Page Header ==================== */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 36px;
+}
+
+/* ==================== Services Carousel ==================== */
+.services-carousel-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--light-color) 0%, #f9f9f9 100%);
+}
+
+.services-carousel-section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: var(--dark-color);
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.services-carousel {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.carousel-item {
+    min-width: 100%;
+    background: white;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.carousel-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.carousel-item h3 {
+    color: var(--dark-color);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.carousel-item .description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.carousel-item p {
+    color: #999;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.carousel-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.carousel-btn:active {
+    transform: scale(0.95);
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #bbb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.indicator-dot.active {
+    background: var(--primary-color);
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* ==================== Responsive Carousel ==================== */
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        gap: 10px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .carousel-item {
+        padding: 30px 20px;
+    }
+
+    .carousel-image {
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
+    }
+
+    .carousel-item h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-wrapper {
+        gap: 8px;
+    }
+
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .carousel-item {
+        padding: 25px 15px;
+    }
+
+    .carousel-image {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+
+    .carousel-item h3 {
+        font-size: 16px;
+    }
+
+    .carousel-item .description {
+        font-size: 12px;
+    }
+}
+
+/* ==================== Services Detail ==================== */
+.services-detail {
+    padding: 60px 0;
+}
+
+.service-detail-item {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.service-detail-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.service-detail-item ul {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.service-detail-item li {
+    margin: 8px 0;
+    color: #666;
+}
+
+/* ==================== About Content ==================== */
+.about-content {
+    padding: 60px 0;
+}
+
+.about-section {
+    margin-bottom: 60px;
+}
+
+.about-section h2 {
+    color: var(--dark-color);
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.about-section h2:first-child {
+    margin-top: 0;
+}
+
+.about-section h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin: 25px 0 15px 0;
+}
+
+.about-section p {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.values-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.values-list li {
+    padding: 10px 0;
+    color: #666;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.values-list li:last-child {
+    border-bottom: none;
+}
+
+/* ==================== Team Section ==================== */
+.team-section {
+    margin-bottom: 60px;
+}
+
+.team-section h2 {
+    color: var(--dark-color);
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    background: var(--light-color);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.member-avatar {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.team-member h4 {
+    color: var(--dark-color);
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.team-member p {
+    color: #666;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.member-bio {
+    color: var(--primary-color);
+    font-style: italic;
+    margin-top: 10px !important;
+}
+
+/* ==================== News Section ==================== */
+.news-section {
+    padding: 60px 0;
+}
+
+.news-item {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-date {
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.news-item h3 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.news-item p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.news-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== Contact Section ==================== */
+.contact-section {
+    padding: 60px 0;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.info-item {
+    background: var(--light-color);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.info-item h3 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.info-item p {
+    color: #666;
+}
+
+.info-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+/* ==================== Contact Form ==================== */
+.contact-form-wrapper {
+    background: white;
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form-wrapper h2 {
+    color: var(--dark-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--dark-color);
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* ==================== Footer ==================== */
+.footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 40px 0 0 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-section p,
+.footer-section ul {
+    color: #bbb;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    color: #999;
+    font-size: 13px;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .services-preview h2,
+    .why-us h2,
+    .cta h2 {
+        font-size: 24px;
+    }
+
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    .about-section h2 {
+        font-size: 22px;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .services-preview,
+    .why-us,
+    .about-content,
+    .news-section,
+    .contact-section {
+        padding: 40px 0;
+    }
+
+    .menu {
+        gap: 5px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Nội dung - DO MT CMS</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>DO MT Admin</h2>
+            </div>
+            <nav class="admin-menu">
+                <a href="#" class="menu-item active" data-tab="dashboard">📊 Dashboard</a>
+                <a href="#" class="menu-item" data-tab="services">📋 Quản lý Dịch vụ</a>
+                <a href="#" class="menu-item" data-tab="news">📰 Quản lý Tin tức</a>
+                <a href="#" class="menu-item" data-tab="contacts">📧 Liên hệ từ Khách hàng</a>
+                <a href="#" class="menu-item" data-tab="settings">⚙️ Cài đặt</a>
+                <hr>
+                <a href="index.html" class="menu-item">← Về Website</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Dashboard -->
+            <div id="dashboard" class="tab-content active">
+                <h1>Dashboard</h1>
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="total-contacts">0</div>
+                        <div class="stat-label">Liên hệ</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="total-news">0</div>
+                        <div class="stat-label">Bài viết</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="total-services">0</div>
+                        <div class="stat-label">Dịch vụ</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manage Services -->
+            <div id="services" class="tab-content">
+                <h1>Quản lý Dịch vụ</h1>
+                <button class="btn btn-primary" id="add-service-btn">+ Thêm Dịch vụ</button>
+                <div id="services-list" class="content-list"></div>
+            </div>
+
+            <!-- Manage News -->
+            <div id="news" class="tab-content">
+                <h1>Quản lý Tin tức</h1>
+                <button class="btn btn-primary" id="add-news-btn">+ Thêm Tin tức</button>
+                <div id="news-list" class="content-list"></div>
+            </div>
+
+            <!-- Contacts -->
+            <div id="contacts" class="tab-content">
+                <h1>Liên hệ từ Khách hàng</h1>
+                <div id="contacts-list" class="content-list"></div>
+            </div>
+
+            <!-- Settings -->
+            <div id="settings" class="tab-content">
+                <h1>Cài đặt Website</h1>
+                <form id="settings-form" class="form">
+                    <div class="form-group">
+                        <label>Tên Công ty</label>
+                        <input type="text" id="company-name" placeholder="DO MT">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="company-email" placeholder="info@domt.vn">
+                    </div>
+                    <div class="form-group">
+                        <label>Điện thoại</label>
+                        <input type="tel" id="company-phone" placeholder="0123-456-789">
+                    </div>
+                    <div class="form-group">
+                        <label>Địa chỉ</label>
+                        <input type="text" id="company-address" placeholder="Địa chỉ văn phòng">
+                    </div>
+                    <div class="form-group">
+                        <label>Giới thiệu</label>
+                        <textarea id="company-intro" placeholder="Giới thiệu công ty" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Lưu Cài đặt</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for editing -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="modal-form" class="form">
+                <h2 id="modal-title">Thêm mới</h2>
+                <input type="hidden" id="modal-id">
+                <input type="hidden" id="modal-type">
+                
+                <!-- Service fields -->
+                <div id="service-fields" style="display: none;">
+                    <div class="form-group">
+                        <label>Tiêu đề *</label>
+                        <input type="text" id="service-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Icon (emoji)</label>
+                        <input type="text" id="service-icon" placeholder="📋">
+                    </div>
+                    <div class="form-group">
+                        <label>Mô tả *</label>
+                        <input type="text" id="service-description" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Chi tiết *</label>
+                        <textarea id="service-details" required rows="4"></textarea>
+                    </div>
+                </div>
+
+                <!-- News fields -->
+                <div id="news-fields" style="display: none;">
+                    <div class="form-group">
+                        <label>Tiêu đề *</label>
+                        <input type="text" id="news-title" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Ngày *</label>
+                        <input type="date" id="news-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tóm tắt *</label>
+                        <input type="text" id="news-summary" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nội dung *</label>
+                        <textarea id="news-content" required rows="5"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Lưu</button>
+                <button type="button" class="btn btn-secondary" onclick="closeModal()">Hủy</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

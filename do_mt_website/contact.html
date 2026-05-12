@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - DO MT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">DO MT</div>
+            <ul class="menu">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="services.html">Dịch vụ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="news.html">Tin tức</a></li>
+                <li><a href="contact.html" class="active">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Liên hệ Chúng tôi</h1>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <h3>📞 Điện thoại</h3>
+                    <p><a href="tel:0123456789">0123-456-789</a></p>
+                </div>
+                <div class="info-item">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:info@domt.vn">info@domt.vn</a></p>
+                </div>
+                <div class="info-item">
+                    <h3>📍 Địa chỉ</h3>
+                    <p>123 Đường ABC, Quận ABC, Hà Nội, Việt Nam</p>
+                </div>
+                <div class="info-item">
+                    <h3>🕐 Thời gian làm việc</h3>
+                    <p>Thứ 2 - Thứ 6: 8:00 - 17:00</p>
+                    <p>Thứ 7: 8:00 - 12:00</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2>Form Liên hệ</h2>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Họ và tên *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Điện thoại *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Công ty</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Dịch vụ quan tâm *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Chọn dịch vụ</option>
+                            <option value="dtm">Đánh giá Tác động Môi trường</option>
+                            <option value="qtmt">Giám sát Quan trắc Môi trường</option>
+                            <option value="gpm">Xin Giấy phép Môi trường</option>
+                            <option value="qlct">Quản lý Chất thải</option>
+                            <option value="khac">Khác</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Nội dung tin nhắn *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gửi Tin nhắn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DO MT</h4>
+                    <p>Dịch vụ Tư vấn Môi trường Chuyên nghiệp</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <p>📞 0123-456-789</p>
+                    <p>📧 info@domt.vn</p>
+                    <p>📍 Hà Nội, Việt Nam</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DO MT. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
